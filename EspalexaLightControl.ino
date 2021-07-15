@@ -44,7 +44,7 @@ void loop()
    espalexa.loop();
    delay(1);
   }
-  blinkingLED(1,10); // 1000ループ毎にLEDを瞬時点灯させる。
+  blinkingLED(1,10); // 2000ループ毎にLEDを瞬時点灯させる。
 }
 
 //our callback functions
