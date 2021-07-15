@@ -60,13 +60,13 @@ void firstLightChanged(uint8_t brightness) {
       blinkingLED(1,100);     // added for LED indicator //
     }
     else if ((brightness > current_value) && (current_value != 0)) {   // Dim UP
-      Serial.print("ON, brightness ");
+      Serial.print("UP, brightness ");
       Serial.println(brightness);
       irsend.sendNEC(0x41B65DA2,32); // INC command
       blinkingLED(1,50);     // added for LED indicator //
     }
     else if ((brightness < current_value) && (brightness != 0) ) {   // Dim DOWN
-      Serial.print("ON, brightness ");
+      Serial.print("DOWN, brightness ");
       Serial.println(brightness);
       irsend.sendNEC(0x41B6DD22,32); // DEC command
       blinkingLED(2,50);     // added for LED indicator //
